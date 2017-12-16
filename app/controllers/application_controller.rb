@@ -11,5 +11,7 @@ class ApplicationController < Sinatra::Base
     erb :new
   end
 
-  get ""
+  post '/recipes' do
+    @recipe = Recipe.new(name: params[:name], ingredients: params[:ingredients], cook_time: params[:cook_time])
+  end
 end
