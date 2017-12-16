@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
 
-    erb: :"recipes/show"
+    erb :"recipes/show"
   end
 
   delete '/recipes/:id/delete' do
