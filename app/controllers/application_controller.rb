@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes' do
     @recipes = Recipes.all
-    erb ":recipes/index"
+    erb :"recipes/index"
   end
 
   post '/recipes' do
