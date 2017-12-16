@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
 
-    redirect to :'recipes/index'
+    redirect to :'recipes/:id'
   end
 
   delete '/recipes/:id/delete' do
